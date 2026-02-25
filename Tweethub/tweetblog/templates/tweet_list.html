@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+tweet with chai
+{% endblock %}
+
+{% block content %}
+<h2 class="text-center mt-4">Welcome! To TweetHub chai with friends</h2>
+
+<a class="btn btn-primary mb-4" href="{% url 'tweet_create' %}">create a tweet</a>
+<div class="container row gap-3">
+    {% for twt in tweets %}
+    <div class="card" style="width: 18rem;">
+        <img src="{{twt.photo.url}}" class="card-img-top" alt="tweetimage">
+        <div class="card-body">
+            <h5 class="card-title">{{twt.user.username}}</h5>
+            <p class="card-text">{{twt.text}}</p>
+            <a href="{% url 'tweet_edit' twt.id %}"
+                class="btn btn-primary">Edit</a>
+            <a href="{% url 'tweet_delete' twt.id %}"
+                class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
