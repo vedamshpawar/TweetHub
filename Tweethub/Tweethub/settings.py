@@ -125,6 +125,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  #Where dev static files a
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/' #Browser URL path for user uploads
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #Where uploaded files are stored
+MEDIA_ROOT =  BASE_DIR / 'media' #Where uploaded files are stored
 
 
