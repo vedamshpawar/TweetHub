@@ -128,3 +128,7 @@ MEDIA_URL = '/media/' #Browser URL path for user uploads
 MEDIA_ROOT =  BASE_DIR / 'media' #Where uploaded files are stored
 
 
+LOGIN_URL = '/accounts/tweetblog'
+
+LOGIN_REQUIRED_URL = '/tweetblog/'
+LOGOUT_REQUIRED_URL = '/tweetblog/'
